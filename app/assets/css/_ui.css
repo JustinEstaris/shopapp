@@ -27,6 +27,10 @@ ul{
 	margin:0;
 	padding:0;
 }
+li a:hover {
+	cursor: hand;
+}
+
 .table-view{
 	display: table;
 	height:100%;
@@ -42,6 +46,12 @@ ul{
 
 a{
 	text-decoration: none;
+	color:#9A3EBF;
+	cursor:hand;
+}
+
+a:hover {
+	text-decoration: underline;
 	color:#9A3EBF;
 	cursor:hand;
 }
@@ -77,6 +87,9 @@ nav .cart{
 	font-size:1.6rem;
 	cursor:hand;
 }
+nav .cart a:hover{
+	cursor:hand;
+}
 nav .sign{
 	font-size:1.0rem;
 	color:#9A3EBF;
@@ -93,14 +106,33 @@ Top-content
 input::-webkit-input-placeholder {
 color:#ffa2cf!important;
 }
+
+/*.input-wrapper {
+	width:100%;
+}*/
+.input-wrapper-content{
+	width: 100%;
+}
+
+.input-wrapper-content form{
+	position: relative;
+	width:20rem;
+	margin:0px auto;
+}
+
+.input-wrapper-content form input{
+	height:30px;
+	display: inline-block;
+}
+
 .top-content{
 	width:100%;
 	height:calc(70% - 110px);
-	 background: -webkit-linear-gradient(90deg, #57D6B7  10%, #DD2476  90%); /*Chrome 10+, Saf5.1+*/
- background:    -moz-linear-gradient(90deg, #00aaee  10%, #DD2476  90%); /* FF3.6+ */
- background:     -ms-linear-gradient(90deg, #00aaee  10%, #DD2476  90%);  /*IE10 */
- background:      -o-linear-gradient(90deg, #00aaee  10%, #DD2476  90%); /* Opera 11.10+ */
- background:         linear-gradient(90deg, #8CEDC5  10%, #7465B7  90%); /*W3C*/
+	 background: -webkit-linear-gradient(90deg, #57D6B7  10%, #7465B7  90%); /*Chrome 10+, Saf5.1+*/
+ background:    -moz-linear-gradient(90deg, #57D6B7  10%, #7465B7  90%); /* FF3.6+ */
+ background:     -ms-linear-gradient(90deg, #57D6B7  10%, #7465B7  90%);  /*IE10 */
+ background:      -o-linear-gradient(90deg, #57D6B7  10%, #7465B7  90%); /* Opera 11.10+ */
+ background:         linear-gradient(90deg, #57D6B7  10%, #7465B7  90%); /*W3C*/
 	background-size:cover;
 	background-position:center center;
 	text-align: center;
