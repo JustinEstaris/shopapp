@@ -103,6 +103,17 @@
 				}
 			})
 
+			.state('shop.checkout',{
+				url:'/checkout',
+				templateUrl:'site/partials/checkout-page.html',
+				controller:'CheckOutCtrl as ctrl'
+				// resolve:{
+				// 	products:function(productSrv){
+				// 		return productSrv.getProducts();
+				// 	}
+				// }
+			})
+
 			.state('admin',{
 				url:'/admin',
 				templateUrl:'site/partials/admin.html',

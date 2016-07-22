@@ -6,23 +6,23 @@
 	function ShopCtrl($scope,productSrv,$uibModal){
 	var productsVm = this;
 
-		productsVm.items = ['item1', 'item2', 'item3'];
+		// productsVm.items = ['item1', 'item2', 'item3']; // data that gets passed into shopping cart modal
 
-		  productsVm.animationsEnabled = true;
+		productsVm.animationsEnabled = true;
 
-		  productsVm.open = open;
+		productsVm.open = open;
 
-		  productsVm.open = function (size) {
+		productsVm.open = function (size) {
 		  	console.log('open');
 
 		    var modalInstance = $uibModal.open({
 		      animation: productsVm.animationsEnabled,
-		      templateUrl: 'site/controllers/modal.html',
-		      controller: 'ModalInstanceCtrl',
+		      templateUrl: 'site/partials/modal.html',
+		      controller: 'ModalInstanceCtrl as ctrl',
 		      size: size,
 		      resolve: {
 		        items: function() {
-		          return productsVm.items;
+		          return productSrv.cart; // how we pass data into shopping cart controller
 		        }
 		      }
 		    });

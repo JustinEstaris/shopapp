@@ -1,0 +1,66 @@
+<!-- 	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Check Out</title>
+		<link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" text="text/css" href="../../assets/css/_ui.css">
+		</style>
+	</head>
+	<body> -->
+	<div class="content-wrapper">
+	<div class="product-view">
+ 		<table class="table">
+	        <tr>
+	        	<th>Item</th>	            
+	            <th>Description</th>
+	            <th>Qty</th>
+	            <th>Cost</th>
+	            <th>Sub Total</th>
+	            <th></th>
+	        </tr>
+	        <tr ng-repeat="item in ctrl.products">
+	        	<td>{{item.name}}</td>
+	            <td>{{item.description}}</td>           
+	            <td>{{item.quantity}}</td>
+	            <td>{{item.price}}</td>
+	            <td>{{item.quantity * item.price | currency}}</td>
+	            <td>
+	                [<a href ng-click="removeItem($index)">X</a>]
+	            </td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td>Total:</td>
+	            <td>{{total() | currency}}</td>
+	        </tr>
+    	</table>
+
+
+		<table>
+		<tr>
+			<p>Name</p>
+			<input type="text">
+		</tr>
+		<tr>
+		<p>Email</p>
+			<input type="email">
+		</tr>
+		<tr>
+			<p>Credit Card</p>
+			<input type="text">
+		</tr>
+		<tr>
+			<p>Address</p>
+			<input type="text">
+		</tr>
+		</table>
+		</div>	
+	</div>
+</section>
+
+<!-- 	</body>
+	</html> -->
+

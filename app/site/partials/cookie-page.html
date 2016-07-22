@@ -1,28 +1,32 @@
-
-<!-- This section refers to the products view after the navigation bar-->
 <section class="cookieBody" role="product-cookie">
 <span id="cookies-products">
-	<div section="container">
-		<div class="row">
-			<ul>
-				<li ng-repeat="products in ctrl.products">
-					<div class="col-md-4">
-						<div class="card transition">
-							<h2 class="transition">{{products.name}}</h2>
-							<p>{{products.description}}</p>
-							<p>{{products.price}}</p>
-							<div class="cta-container transition"><a href="#" class="cta">Add to Cart</a></div>
-							<div class="card_circle transition" style="background:url('{{products.image}}');
-							background-size: 200px;
-							border-radius: 75%;
-							height: 400px;
-							margin-left: -75px;
-							 margin-top: -270px;
-							 position: absolute;
-							 width: 450px;">
-						 </div>
-					 </div>
-				 </li>
-			 </ul>
-		 </span>
+    <div section="container">
+        <div class="row">
+                <div class="col-md-4" ng-repeat="products in ctrl.products">
+                    <div class="card ">
+                        <h2>{{products.name}}</h2>
+                        <div class="img_holder center-block" style="background:url('{{products.image}}');
+                            background-size: cover no-repeat center;
+                            height: 200px;
+                            position: absolute;
+                            right: 10%;
+                            box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);">
+                             </div>
+
+                             <div class="description">
+                            <h5>Description</h5>{{products.description}}    
+                            </div>
+                            
+                            <div class="price">
+                            <h5>Price</h5> 
+                            ${{products.price}}
+                            </div>
+                        
+                         <button type="button" class="btn btn-primary center-block" ng-model="singleModel" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">Add to cart</button>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>    
+</span>
 </section>
