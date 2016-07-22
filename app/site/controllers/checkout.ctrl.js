@@ -4,27 +4,28 @@
         .controller ('CheckOutCtrl', CheckOutCtrl);
 
     function CheckOutCtrl(productSrv) {
-        CartForm = this;
+        CheckOutCtrl = this;
 
-        this.cart = productSrv.cart; // data in the cart
+        this.products = productSrv.cart; // data in the cart
 
-        var fakeCart = [{
-          "name": 'One',
-          "image": 'One',
-          "description": 'One',
-          "category": 'One',
-          "price": 3.00,
-          "quantity": 1
-        },
-        {
-          "name": 'Two',
-          "image": 'Two',
-          "description": 'Two',
-          "category": 'Two',
-          "price":  4.00,
-          "quantity": 2
-        }];
-        this.products = fakeCart; // to use fake data
+        // var fakeCart = [{
+        //   "name": 'One',
+        //   "image": 'One',
+        //   "description": 'One',
+        //   "category": 'One',
+        //   "price": 3.00,
+        //   "quantity": 1
+        // },
+        // {
+        //   "name": 'Two',
+        //   "image": 'Two',
+        //   "description": 'Two',
+        //   "category": 'Two',
+        //   "price":  4.00,
+        //   "quantity": 2
+        // }];
+
+        // this.products = fakeCart; // to use fake data
 
         this.invoice = {
             items: [{

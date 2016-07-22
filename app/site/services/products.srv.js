@@ -106,7 +106,7 @@
 
 
 		function addToCart(){
-			self.cart.push(productId);
+			self.product.push(productId);
 		}
 
 		function removeFromCart(){

@@ -5,25 +5,25 @@ angular
 
     var modalVm = this;
 
-    var fakeCart = [{
-      "name": 'One',
-      "image": 'One',
-      "description": 'One',
-      "category": 'One',
-      "price": 3.00,
-      "quantity": 1
-    },
-    {
-      "name": 'Two',
-      "image": 'Two',
-      "description": 'Two',
-      "category": 'Two',
-      "price":  4.00,
-      "quantity": 2
-    }];
+    // var fakeCart = [{
+    //   "name": 'One',
+    //   "image": 'One',
+    //   "description": 'One',
+    //   "category": 'One',
+    //   "price": 3.00,
+    //   "quantity": 1
+    // },
+    // {
+    //   "name": 'Two',
+    //   "image": 'Two',
+    //   "description": 'Two',
+    //   "category": 'Two',
+    //   "price":  4.00,
+    //   "quantity": 2
+    // }];
 
-    // modalVm.items = items; // use REAL data
-    modalVm.items = fakeCart; // use FAKE data
+    modalVm.items = items; // use REAL data
+    // modalVm.items = fakeCart; // use FAKE data
     modalVm.selected = {
       item: modalVm.items[0]
     };
